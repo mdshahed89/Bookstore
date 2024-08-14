@@ -24,6 +24,12 @@ try {
     console.log("Error: ", error);
 }
 
+app.use("/",(req, res) => {
+    res.json({
+        message: "Server is running"
+    })
+})
+
 // defining routes
 app.use("/book", bookRoute);
 app.use("/user", userRoute);
